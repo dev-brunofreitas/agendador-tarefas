@@ -22,11 +22,11 @@ public class SecurityConfig {
 
     // Instâncias de JwtUtil e UserDetailsService injetadas pelo Spring
     private final com.javanauta.usuario.infrastructure.security.JwtUtil jwtUtil;
-    private final UserDetailsService userDetailsService;
+    private final com.javanauta.usuario.infrastructure.security.UserDetailsServiceImpl userDetailsService;
 
     // Construtor para injeção de dependências de JwtUtil e UserDetailsService
     @Autowired
-    public SecurityConfig(com.javanauta.usuario.infrastructure.security.JwtUtil jwtUtil, UserDetailsService userDetailsService) {
+    public SecurityConfig(com.javanauta.usuario.infrastructure.security.JwtUtil jwtUtil, com.javanauta.usuario.infrastructure.security.UserDetailsServiceImpl userDetailsService) {
         this.jwtUtil = jwtUtil;
         this.userDetailsService = userDetailsService;
     }
